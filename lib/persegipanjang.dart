@@ -3,16 +3,16 @@ import 'package:apk_bangun_datar/LuasController.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-class LuasSegitiga extends StatefulWidget {
-  const LuasSegitiga({Key? key}) : super(key: key);
+class luasPersegiPanjang extends StatefulWidget {
+  const luasPersegiPanjang({Key? key}) : super(key: key);
 
   @override
-  State<LuasSegitiga> createState() => _LuasSegitigaState();
+  State<luasPersegiPanjang> createState() => _LuasPersegiPanjang();
 }
 
-class _LuasSegitigaState extends State<LuasSegitiga> {
-  TextEditingController ctrAlas = TextEditingController();
-  TextEditingController ctrTinggi = TextEditingController();
+class _LuasPersegiPanjang extends State<luasPersegiPanjang> {
+  TextEditingController ctrPanjang = TextEditingController();
+  TextEditingController ctrLebar = TextEditingController();
   final LuasController controller = Get.put(LuasController());
 
   Widget myTextField(TextEditingController ctr, String myLabel) {
@@ -55,7 +55,7 @@ class _LuasSegitigaState extends State<LuasSegitiga> {
                     Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Text(
-                        'SEGITIGA',
+                        'PERSEGI PANJANG',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 33.60,
@@ -69,7 +69,7 @@ class _LuasSegitigaState extends State<LuasSegitiga> {
                       child: SizedBox(
                         width: 324,
                         child: Text(
-                          'segitiga merupakan bangun datar yang dibatasi dengan adanya tiga buah sisi serta memiliki tiga buah titik sudut. ',
+                          'Persegi panjang adalah bangun datar dua dimensi yang dibentuk oleh dua pasang sisi yang masing-masing sama panjang dan sejajar dengan pasangannya, dan memiliki empat buah sudut yang kesemuanya adalah sudut siku-siku.',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
@@ -95,7 +95,7 @@ class _LuasSegitigaState extends State<LuasSegitiga> {
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     image:
-                                        AssetImage('images/luas_segitiga.png'),
+                                        AssetImage('images/luas_persegi_panjang.jpg'),
                                     fit: BoxFit.cover,
                                   ),
                                   borderRadius: BorderRadius.circular(8),
@@ -127,7 +127,7 @@ class _LuasSegitigaState extends State<LuasSegitiga> {
                       child: SizedBox(
                         width: 330,
                         height: 40,
-                        child: myTextField(ctrAlas, "Alas (cm)"),
+                        child: myTextField(ctrPanjang, "Panjang (cm)"),
                       ),
                     ),
                     Padding(
@@ -135,7 +135,7 @@ class _LuasSegitigaState extends State<LuasSegitiga> {
                       child: SizedBox(
                         width: 330,
                         height: 40,
-                        child: myTextField(ctrTinggi, "Tinggi (cm)"),
+                        child: myTextField(ctrLebar, "Lebar (cm)"),
                       ),
                     ),
                     ElevatedButton(
@@ -144,9 +144,9 @@ class _LuasSegitigaState extends State<LuasSegitiga> {
                           shape: const RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)))),
-                      onPressed: () => controller.luasSegitiga(
-                        double.parse(ctrAlas.text.toString()),
-                        double.parse(ctrTinggi.text.toString()),
+                      onPressed: () => controller.luasPersegiPanjang(
+                        double.parse(ctrPanjang.text.toString()),
+                        double.parse(ctrLebar.text.toString()),
                       ),
                       child: Text('Submit'),
                     ),
@@ -180,10 +180,10 @@ class _LuasSegitigaState extends State<LuasSegitiga> {
                           () {
                             String hasilText = "";
 
-                              hasilText = controller.hasilLuasSegitiga.value.toString();
+                              hasilText = controller.hasilLuasPersegiPanjang.value.toString();
                             
                             return Text(
-                              "hasil dari luas segitiga dengan alas ${ctrAlas.text} cm dan tinggi ${ctrTinggi.text} cm adalah:  ${hasilText} cm²",
+                              "hasil dari luas persegi panjang dengan panjang ${ctrPanjang.text} cm dan lebar ${ctrLebar.text} cm adalah:  ${hasilText} cm²",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 10,
@@ -191,8 +191,6 @@ class _LuasSegitigaState extends State<LuasSegitiga> {
                                 fontWeight: FontWeight.w400,
                               ),
                             );
-
-                            
                           },
                         ))
                   ],

@@ -18,7 +18,7 @@ class LuasController extends GetxController {
   luasPersegiPanjang(double panjang, double lebar){
     hasilLuasPersegiPanjang.value =panjang * lebar ;
   }
-luasBelahKetupat(double diagonal1, double diagonal2) {
+  luasBelahKetupat(double diagonal1, double diagonal2) {
   hasilLuasBelahKetupat.value = 0.5 * diagonal1 * diagonal2;
 }
   luasLingkaran(double jarijari){

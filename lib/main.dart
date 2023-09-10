@@ -1,3 +1,7 @@
+import 'package:apk_bangun_datar/belahketupat.dart';
+import 'package:apk_bangun_datar/lingkaran.dart';
+import 'package:apk_bangun_datar/persegipanjang.dart';
+import 'package:apk_bangun_datar/segiempat.dart';
 import 'package:flutter/material.dart';
 import 'package:apk_bangun_datar/segitiga.dart';
 
@@ -115,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LuasBangunDatarPage(2),
+                        builder: (context) => luasLingkaran(),
                       ),
                     );
                   },
@@ -144,7 +148,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LuasBangunDatarPage(3),
+                        builder: (context) => LuasSegiEmpat(),
                       ),
                     );
                   },
@@ -173,7 +177,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LuasBangunDatarPage(4),
+                        builder: (context) => luasPersegiPanjang(),
                       ),
                     );
                   },
@@ -202,7 +206,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LuasBangunDatarPage(5),
+                        builder: (context) => luasBelahKetupat(),
                       ),
                     );
                   },

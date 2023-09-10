@@ -67,6 +67,10 @@ flutter:
     - images/rumus_segitiga.png
     - images/luas_segitiga_rev.png
     - images/luas_segitiga.png
+    - images/luas_persegi.png
+    - images/rumus-lingkaran.jpg
+    - images/luas_persegi_panjang.jpg
+    - images/luas_belah_ketupat.jpg
     # - images/a_dot_burr.jpeg
     # - images/a_dot_ham.jpeg
 
